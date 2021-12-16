@@ -152,7 +152,7 @@ def main():
     optimizer.step()
 
     # TRAINING
-    train(args, model, optimizer, scheduler_warmup, criterion, train_loader, val_loader, device, log)
+    train(args, model, optimizer, scheduler_warmup, criterion, train_loader, val_loader, device)
 
 if __name__ == '__main__':
     main()
