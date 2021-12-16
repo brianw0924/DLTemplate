@@ -109,8 +109,8 @@ def train(args, model, optimizer, scheduler, criterion, train_loader, val_loader
 
             train_loss = 0
             count = 0
-            
-        model.train()
+
+            model.train()
 
 
 def main():
