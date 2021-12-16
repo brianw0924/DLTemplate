@@ -21,7 +21,7 @@ class Mydataset(data.Dataset):
 
     def __len__(self):
 
-def get_loader_TEyeD(args):
+def Myloader(args):
 
     train_dataset = 
 
