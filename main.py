@@ -37,7 +37,7 @@ def parse_args():
 
     args = parser.parse_args()
 
-    assert os.path.exists(args.dataset)
+    assert os.path.exists(args.data_dir)
 
     return args
 
