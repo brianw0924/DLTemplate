@@ -93,7 +93,7 @@ def train(args, model, optimizer, scheduler, criterion, train_loader, val_loader
         if (step+1) % args.val_steps == 0:
             
             # TRAINING RECORD
-            train_loss = train_loss * args.accumulate * args.batch_size / count
+            train_loss = train_loss * args.accumulate / args.val_steps
     
             #VALIDATION
             val_loss = validation(args, step+1, model, criterion, val_loader, device)
