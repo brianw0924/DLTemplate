@@ -109,6 +109,8 @@ def train(args, model, optimizer, scheduler, criterion, train_loader, val_loader
 
             train_loss = 0
             count = 0
+            
+        model.train()
 
 
 def main():
@@ -124,11 +126,11 @@ def main():
     Set_seed(args.seed)
 
     # OUTPUT DIRECTORY
-    if not os.path.exists(args.outdir):
-        os.makedirs(args.outdir)
+    if not os.path.exists(args.out_dir):
+        os.makedirs(args.out_dir)
 
     # RECORD ARGS
-    args_json = os.path.join(args.outdir, 'args.json')
+    args_json = os.path.join(args.out_dir, 'args.json')
     with open(args_json, 'w') as fout:
         json.dump(vars(args), fout, indent=2)
 
